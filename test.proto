@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+message sub {
+    uint32 a = 1; 
+    uint32 b = 2; 
+    uint32 c = 3; 
+    uint32 d = 4;
+    uint32 e = 5;
+}
+
+message req {
+  string user_name = 1;
+  string passwd = 2;
+  string token = 3;
+  string manufacturer = 4;
+  string payload_desc = 5;
+  sub s = 6;
+}
+
+message rsp {
+  string manufacturer = 1;
+  string payload_desc = 2;
+  repeated uint32 payload = 3;
+  uint32 checkSumA = 4;
+  uint32 checkSumB = 5;
+}
+

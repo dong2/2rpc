@@ -1,3 +1,5 @@
+## A simple and complete example of protobuf-c
+
 ```
 1) autotools (autoconf, automake, libtool) must also be installed
 sudo apt-get install autoconf automake libtool curl make g++ unzip

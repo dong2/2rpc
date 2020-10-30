@@ -31,8 +31,8 @@ int main (int argc, const char * argv[])
     req.token = (char*)malloc(sizeof(char)*32);
     req.manufacturer = (char*)malloc(sizeof(char)*32);
     req.payload_desc = (char*)malloc(sizeof(char)*32);
-    snprintf(req.manufacturer, 7, "%s", "qianxun");
-    snprintf(req.payload_desc, 4, "%s", "supl");
+    snprintf(req.manufacturer, 6, "%s", "ublox");
+    snprintf(req.payload_desc, 4, "%s", "ubx");
 
     /* pack */
     unsigned char *buf; 
@@ -67,8 +67,8 @@ int main (int argc, const char * argv[])
     rsp.payload = (uint32_t*)malloc (sizeof (uint32_t) * rsp.n_payload);
     rsp.checksuma = 55;
     rsp.checksumb = 66;
-    snprintf(rsp.manufacturer, 4, "%s", "xxx");
-    snprintf(rsp.payload_desc, 4, "%s", "yyy");
+    snprintf(rsp.manufacturer, 6, "%s", "ublox");
+    snprintf(rsp.payload_desc, 4, "%s", "ubx");
 
     /* pack */
     unsigned char *buf; 

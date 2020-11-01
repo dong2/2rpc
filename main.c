@@ -23,8 +23,8 @@ int main (int argc, const char * argv[])
     sub.b = 2;
     sub.c = 3;
     sub.d = 4;
-    sub.e = 5;
-    Req req = REQ__INIT;   
+    sub.e = 5;      
+    Req req = REQ__INIT;
     req.s = &sub;
     req.user_name = (char*)malloc(sizeof(char)*32);
     req.passwd = (char*)malloc(sizeof(char)*32);
@@ -50,7 +50,6 @@ int main (int argc, const char * argv[])
       return 1;
     }
     printf("reading manufacturer:%s payload_desc:%s\n",rreq->manufacturer, rreq->payload_desc);
-    printf("reading a:%d b:%d a:%d b:%d e:%d\n",rreq->s->a, rreq->s->b, rreq->s->c, rreq->s->d, rreq->s->e);
     req__free_unpacked(rreq,NULL);
     
     free(buf);
@@ -65,8 +64,8 @@ int main (int argc, const char * argv[])
     rsp.payload_desc = (char*)malloc(sizeof(char)*32);
     rsp.n_payload = 1400;
     rsp.payload = (uint32_t*)malloc (sizeof (uint32_t) * rsp.n_payload);
-    rsp.checksuma = 55;
-    rsp.checksumb = 66;
+    rsp.checksuma = 56;
+    rsp.checksumb = 78;
     snprintf(rsp.manufacturer, 6, "%s", "ublox");
     snprintf(rsp.payload_desc, 4, "%s", "ubx");
 

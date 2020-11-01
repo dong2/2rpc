@@ -1,5 +1,3 @@
-## A simple and complete example of protobuf-c
-
 ```
 1) autotools (autoconf, automake, libtool) must also be installed
 sudo apt-get install autoconf automake libtool curl make g++ unzip
@@ -14,6 +12,15 @@ export LD_LIBRARY_PATH=/usr/local/lib
 ./autogen.sh
 ./configure
 make && sudo make install
+
+4) install nanomsg
+1.  `% mkdir build`
+2.  `% cd build`
+3.  `% cmake ..`
+4.  `% cmake --build .`
+5.  `% ctest .`
+6.  `% sudo cmake --build . --target install`
+7.  `% sudo ldconfig` (if on Linux)
 
 4) protoc-c example.proto --c_out=./
 
@@ -30,7 +37,13 @@ https://github.com/protocolbuffers/protobuf/blob/master/src/README.md
 https://github.com/protobuf-c/protobuf-c/wiki/Examples
 
 
-test sample
+8) test sample
 protoc-c test.proto --c_out=./
+
 gcc main.c -o main test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
+
+gcc client.c -o client test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
+gcc server.c -o server test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
+
+gcc rpc_demo.c -o rpc_demo test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'` -lnanomsg
 ```

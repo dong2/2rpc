@@ -44,7 +44,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <time.h>
 
 #include <nanomsg/nn.h>
 #include <nanomsg/reqrep.h>
@@ -115,7 +114,6 @@ int server(const char *url)
             
             req__free_unpacked(rreq,NULL);
         }
-
 
         /* rsp pack */ 
         {   

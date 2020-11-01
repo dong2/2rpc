@@ -24,7 +24,7 @@ make && sudo make install
 
 4) protoc-c example.proto --c_out=./
 
-5) example
+5) protobuf example
 gcc main.c -o main example.pb-c.c -lprotobuf-c -L ./protobuf-c/lib/ -I ./protobuf-c/include/protobuf-c
 gcc main.c -o main example.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
 g++ main.cc -o main example.pb.cc `pkg-config --cflags --libs protobuf`
@@ -37,13 +37,9 @@ https://github.com/protocolbuffers/protobuf/blob/master/src/README.md
 https://github.com/protobuf-c/protobuf-c/wiki/Examples
 
 
-8) test sample
+8) nanomsg + protobuf sample
 protoc-c test.proto --c_out=./
 
-gcc main.c -o main test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
-
-gcc client.c -o client test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
-gcc server.c -o server test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'`
-
 gcc rpc_demo.c -o rpc_demo test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'` -lnanomsg
+
 ```

@@ -109,8 +109,8 @@ int server(const char *url)
             { 
               return 1;
             }
-		    printf("reading manufacturer:%s payload_desc:%s\n",rreq->manufacturer, rreq->payload_desc);
-		    printf("reading a:%d b:%d a:%d b:%d e:%d\n",rreq->s->a, rreq->s->b, rreq->s->c, rreq->s->d, rreq->s->e);
+	    printf("reading manufacturer:%s payload_desc:%s\n",rreq->manufacturer, rreq->payload_desc);
+	    printf("reading a:%d b:%d a:%d b:%d e:%d\n",rreq->s->a, rreq->s->b, rreq->s->c, rreq->s->d, rreq->s->e);
             
             req__free_unpacked(rreq,NULL);
         }

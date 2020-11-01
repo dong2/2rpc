@@ -36,10 +36,8 @@ https://github.com/protocolbuffers/protobuf/blob/master/src/README.md
 7) wiki example
 https://github.com/protobuf-c/protobuf-c/wiki/Examples
 
-
 8) nanomsg + protobuf sample
 protoc-c test.proto --c_out=./
-
 gcc rpc_demo.c -o rpc_demo test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'` -lnanomsg
 
 ```

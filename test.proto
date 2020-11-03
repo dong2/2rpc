@@ -25,3 +25,7 @@ message rsp {
   uint32 checkSumB = 5;
 }
 
+service test_service {
+  rpc test (req) returns (rsp);
+}
+

@@ -41,11 +41,14 @@ https://github.com/protobuf-c/protobuf-c/wiki/Examples
 protoc-c test.proto --c_out=./
 gcc rpc_demo.c -o rpc_demo test.pb-c.c `pkg-config --cflags --libs 'libprotobuf-c >= 1.0.0'` -lnanomsg
 
-9) protobuf keys
+9) protobuf keywords
 import
 package
 map
 service
 ...
 
+nng - nanomsg-next-gen
+NNG: Lightweight Messaging Library
+https://github.com/nanomsg/nng
 ```

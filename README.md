@@ -14,6 +14,7 @@ export LD_LIBRARY_PATH=/usr/local/lib
 make && sudo make install
 
 4) install nanomsg
+git clone https://github.com/nanomsg/nanomsg.git
 1.  `% mkdir build`
 2.  `% cd build`
 3.  `% cmake ..`

@@ -12,6 +12,7 @@ https://www.jsonrpc.org/
   
 A lightweight RPC library based on XML and HTTP  
   
+http://xmlrpc-c.sourceforge.net/  
   
 ### nanorpc
   
